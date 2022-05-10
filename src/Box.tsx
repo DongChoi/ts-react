@@ -1,3 +1,5 @@
+import { IBox, IBoxProps } from "./interfaces"
+
 /** Colored box presentation
  *
  * Props:
@@ -10,16 +12,8 @@
  * BoxList -> Box
  */
 
- interface IBox {
-  id:string;
-  width:number;
-  height:number;
-  backgroundColor:string;
-  remove:Function;
-}
 
-
-function Box({ id, width = 5, height = 5, backgroundColor, remove }:IBox) {
+function Box({ id, width = 5, height = 5, backgroundColor, remove }:IBoxProps) {
 
   /** Remove a box. */
   function handleRemove():void {
